@@ -1,0 +1,13 @@
+<ui-select theme="selectize" ng-model="multiToggleValue" on-select="onValueSelected($item,$model)">
+    <ui-select-match placeholder="Select...">
+    	{{ $select.selected.name}}
+    </ui-select-match>
+    <ui-select-choices repeat="label in assetProfile.labels">
+        <article>
+            <div >
+                <p >{{label.name}}</p>
+            </div>
+        </article>
+    </ui-select-choices>
+</ui-select>
+
