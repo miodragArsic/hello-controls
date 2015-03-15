@@ -11,7 +11,9 @@ angular.module('myApp', [
   'myApp.toggleControl',
   'myApp.multiToggleControl',
   'ui.select',
-  'jsonFormatter'
+  'jsonFormatter',
+  'ngMaterial',
+  'myApp.sliderControl'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});

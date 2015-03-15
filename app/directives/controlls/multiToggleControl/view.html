@@ -2,12 +2,13 @@
     <ui-select-match placeholder="Select...">
     	{{ $select.selected.name}}
     </ui-select-match>
-    <ui-select-choices repeat="label in assetProfile.labels">
+    <ui-select-choices repeat="item in listElements">
         <article>
             <div >
-                <p >{{label.name}}</p>
+                <p >{{item}}</p>
             </div>
         </article>
     </ui-select-choices>
+    
 </ui-select>
 

@@ -35,6 +35,8 @@ function controlHandler($compile) {
 
     	if (controlName == 'multi-toggle') 
     		return template = "<multi-toggle-control multi-toggle-value = 'value' asset-profile = 'profile'> </multi-toggle-control>"
+        if (controlName == 'slider')
+            return template = "<slider-control slider-value = 'value' asset-profile = 'profile'> </slider-control>"
 
         return template;
     }

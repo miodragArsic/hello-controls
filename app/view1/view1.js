@@ -13,9 +13,10 @@ angular.module('myApp.view1', ['ngRoute'])
 
 	$scope.controls = null;
 	$scope.assets = null;
+	$scope.myValue = 2;
 
 	function getAssets(){
-		 $http.get("http://192.168.0.104:8090/nancy/assets")
+		 $http.get("http://att-controls-management.cloudapp.net/assets")
 			.then(function(response){
 				$scope.assets = response.data;
 			})
@@ -26,7 +27,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
 	function getControlls(){
 
-		 $http.get("http://192.168.0.104:8090/nancy/controls").then(function(response) {
+		 $http.get("http://att-controls-management.cloudapp.net/controls").then(function(response) {
                     $scope.controls = response.data;
                 })
 		.catch(function(error){

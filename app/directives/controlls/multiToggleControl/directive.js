@@ -20,6 +20,15 @@ function multiToggleControl() {
     /////////////////////////////////
 
     function linker(scope, element, attrs) {
+        scope.listElements = [];
+
+        if (scope.assetProfile.enum){
+            scope.listElements = scope.assetProfile.enum;
+        }else if (scope.assetProfile.labels){
+            for (var i = 0; i < scope.assetProfile.labels.length; i++) {
+                scope.listElements.push(scope.assetProfile.labels[i].name);
+            };
+        }
 
         scope.$watch('multiToggleValue', function(newValue) {
 

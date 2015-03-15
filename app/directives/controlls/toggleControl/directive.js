@@ -19,6 +19,9 @@ function toggleControl() {
 
     /////////////////////////////////
 
+    // scope.trueValue = true;
+    // scope.falseValue = false;
+
     function linker(scope, element, attrs) {
 
         scope.$watch('toggleValue', function(newValue) {
